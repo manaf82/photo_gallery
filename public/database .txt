@@ -1,0 +1,26 @@
+mysql> CREATE DATABASE photo_gallery;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use photo_gallery;
+Database changed
+mysql> CREATE TABLE users (
+    -> id int(11) NOT NULL auto_increment,
+    -> username varchar(50) NOT NULL,
+    -> password varchar(40) NOT NULL,
+    -> first_name varchar(30) NOT NULL,
+    -> last_name varchar(30) NOT NULL,
+    -> primary key(id)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> GRANT ALL PRIVILEGES ON photo_gallery.*
+    -> TO 'gallery'@'localhost'
+    -> IDENTIFIED BY 'manaf123';
+Query OK, 0 rows affected (0.00 sec)
+
+// Enter mysql database 
+
+D068336@WDFN32201476A c:\xampp
+# mysql -u gallery@localhost
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 24
